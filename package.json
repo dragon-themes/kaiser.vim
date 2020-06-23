@@ -1,0 +1,10 @@
+{
+  "name": "kaiser.vim",
+  "version": "1.0.0",
+  "repository": "https://github.com/dragon-themes/kaiser.vim.git",
+  "author": "Ronaldo Santiago <ronaldo.setzer@gmail.com>",
+  "license": "MIT",
+  "vim": {
+    "opt": true
+  }
+}
