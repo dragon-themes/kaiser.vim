@@ -6,6 +6,7 @@
 
 scriptencoding utf8
 
+
 " Initialisation: 
 " -----------------------------------------------------------------------------
 
@@ -21,6 +22,7 @@ let g:colors_name = 'kaiser'
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
 endif
+
 
 " Palette: 
 " -----------------------------------------------------------------------------
@@ -59,5 +61,33 @@ if has('terminal')
   for s:i in range(16)
     call add(g:terminal_ansi_colors, g:kaiser#palette['color_' . s:i])
   endfor
+endif
+
+
+" User Configuration:
+" -----------------------------------------------------------------------------
+
+if !exists('g:kaiser_bold')
+  let g:kaiser_bold = 1
+endif
+
+if !exists('g:kaiser_italic')
+  let g:kaiser_italic = 1
+endif
+
+if !exists('g:kaiser_underline')
+  let g:kaiser_underline = 1
+endif
+
+if !exists('g:kaiser_undercurl') && g:kaiser_underline != 0
+  let g:kaiser_undercurl = 1
+endif
+
+if !exists('g:kaiser_inverse')
+  let g:kaiser_inverse = 1
+endif
+
+if !exists('g:kaiser_colorterm')
+  let g:kaiser_colorterm = 1
 endif
 
