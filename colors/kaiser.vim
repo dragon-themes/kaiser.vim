@@ -32,7 +32,7 @@ let s:foreground = g:kaiser#palette.foreground
 let s:selection  = g:kaiser#palette.selection
 let s:comments   = g:kaiser#palette.comments
 
-let s:gradient1  = g:kaiser#palette.gradient1
+let s:bondary    = g:kaiser#palette.bondary
 let s:gradient2  = g:kaiser#palette.gradient2
 let s:gradient3  = g:kaiser#palette.gradient3
 let s:gradient4  = g:kaiser#palette.gradient4

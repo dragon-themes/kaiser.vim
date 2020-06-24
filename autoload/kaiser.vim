@@ -5,7 +5,7 @@ let g:kaiser#palette            = {}
 
 " gradient block
 let g:kaiser#palette.background = ['#282828', 235] " 40-40-40
-let g:kaiser#palette.gradient1  = ['#3c3836', 237] " 60-56-47
+let g:kaiser#palette.bondary  = ['#3c3836', 237] " 60-56-47
 let g:kaiser#palette.gradient2  = ['#504945', 239] " 80-73-69
 let g:kaiser#palette.selection  = ['#7c6f64', 243] " 124-111-100
 let g:kaiser#palette.gradient3  = ['#bdae93', 248] " 189-174-147
