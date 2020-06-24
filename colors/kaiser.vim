@@ -42,7 +42,7 @@ let s:secondary  = g:kaiser#palette.secondary
 
 let s:success    = g:kaiser#palette.success
 let s:warning    = g:kaiser#palette.warning
-let s:danger     = g:kaiser#palette.orange
+let s:danger     = g:kaiser#palette.danger
 
 let s:purple     = g:kaiser#palette.purple
 let s:red        = g:kaiser#palette.red
@@ -128,4 +128,45 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
 
   execute join(l:hl_string, ' ')
 endfunction
+
+
+" Kaiser: Hightlight Groups
+" -----------------------------------------------------------------------------
+
+call s:h('KaiserBackground', s:none, s:background)
+
+call s:h('KaiserForeground', s:foreground)
+call s:h('KaiserForegroundBold', s:foreground, s:none, [s:attrs.bold])
+call s:h('KaiserForegroundUnderline', s:foreground, s:none, [s:attrs.underline])
+
+call s:h('KaiserComments', s:comments)
+call s:h('KaiserCommentsBold', s:comments, s:none, [s:attrs.bold])
+
+call s:h('KaiserSelection', s:none, s:selection)
+
+call s:h('KaiserPrimary', s:primary)
+call s:h('KaiserPrimaryBold', s:primary, s:none, [s:attrs.bold])
+call s:h('KaiserPrimaryItalic', s:primary, s:none, [s:attrs.italic])
+
+call s:h('KaiserSecondary', s:secondary)
+call s:h('KaiserSecondaryBold', s:secondary, s:none, [s:attrs.bold])
+call s:h('KaiserSecondaryItalic', s:secondary, s:none, [s:attrs.italic])
+
+call s:h('KaiserSuccess', s:success)
+call s:h('KaiserSuccessBold', s:success, s:none, [s:attrs.bold])
+call s:h('KaiserSuccessItalic', s:success, s:none, [s:attrs.italic])
+
+call s:h('KaiserWarning', s:warning)
+call s:h('KaiserWarningBold', s:warning, s:none, [s:attrs.bold])
+call s:h('KaiserWarningItalic', s:warning, s:none, [s:attrs.italic])
+
+call s:h('KaiserDanger', s:danger)
+call s:h('KaiserDangerBold', s:danger, s:none, [s:attrs.bold])
+call s:h('KaiserDangerItalic', s:danger, s:none, [s:attrs.italic])
+
+call s:h('KaiserError', s:red, s:none, [], s:danger)
+
+call s:h('KaiserErrorLine', s:none, s:none, [s:attrs.undercurl], s:danger)
+call s:h('KaiserWarnLine', s:none, s:none, [s:attrs.undercurl], s:warning)
+call s:h('KaiserInfoLine', s:none, s:none, [s:attrs.undercurl], s:primary)
 
