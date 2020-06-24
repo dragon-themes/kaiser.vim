@@ -27,27 +27,27 @@ endif
 " Palette: 
 " -----------------------------------------------------------------------------
 
-let s:fg        = g:kaiser#palette.fg
-let s:fg1       = g:kaiser#palette.fg1
-let s:fg2       = g:kaiser#palette.fg2
+let s:background = g:kaiser#palette.background
+let s:foreground = g:kaiser#palette.foreground
+let s:selection  = g:kaiser#palette.selection
+let s:comments   = g:kaiser#palette.comments
 
-let s:bg        = g:kaiser#palette.bg
-let s:bg1       = g:kaiser#palette.bg1
-let s:bg2       = g:kaiser#palette.bg2
-let s:bg3       = g:kaiser#palette.bg3
+let s:gradient1  = g:kaiser#palette.gradient1
+let s:gradient2  = g:kaiser#palette.gradient2
+let s:gradient3  = g:kaiser#palette.gradient3
+let s:gradient4  = g:kaiser#palette.gradient4
 
-let s:comment   = g:kaiser#palette.gray
-let s:selection = g:kaiser#palette.bg3
+let s:primary    = g:kaiser#palette.primary
+let s:secondary  = g:kaiser#palette.secondary
 
-let s:aqua      = g:kaiser#palette.aqua
-let s:cyan      = g:kaiser#palette.cyan
-let s:green     = g:kaiser#palette.green
-let s:orange    = g:kaiser#palette.orange
-let s:purple    = g:kaiser#palette.purple
-let s:red       = g:kaiser#palette.red
-let s:yellow    = g:kaiser#palette.yellow
+let s:success    = g:kaiser#palette.success
+let s:warning    = g:kaiser#palette.warning
+let s:danger     = g:kaiser#palette.orange
 
-let s:none      = ['NONE', 'NONE']
+let s:purple     = g:kaiser#palette.purple
+let s:red        = g:kaiser#palette.red
+
+let s:none       = ['NONE', 'NONE']
 
 
 if has('nvim')
