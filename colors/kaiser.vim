@@ -216,3 +216,20 @@ hi! link GitGutterDelete        KaiserBoundarySignDanger
 hi! link GitGutterChangeDelete  KaiserBoundarySignInfo
 
 
+" Asynchronous Lint Engine: 
+
+" call s:h('MatchParen', s:warning, s:none, [s:attrs.underline])
+hi! link ALEError               KaiserErrorLine
+hi! link ALEWarning             KaiserWarnLine
+hi! link ALEInfo                KaiserInfoLine
+
+hi! link ALEErrorSign           KaiserBoundarySignDanger
+hi! link ALEWarningSign         KaiserBoundarySignWarning
+hi! link ALEInfoSign            KaiserBoundarySignInfo
+
+hi! link ALEVirtualTextError    KaiserDanger
+hi! link ALEVirtualTextWarning  KaiserWarning
+hi! link ALEVirtualTextInfo     KaiserInfo
+
+
+
