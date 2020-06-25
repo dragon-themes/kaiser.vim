@@ -208,11 +208,13 @@ call s:h('Folded', s:comments, s:boundary, [s:attrs.italic])
 call s:h('FoldColumn', s:boundarysoft, s:boundarysoft)
 hi! link IncSearch    KaiserIncSearch
 hi! link LineNr       KaiserFgSelection
+hi! link MoreMsg      KaiserInfoBold
 call s:h('NonText', s:boundarysoft)
 call s:h('Pmenu', s:foreground, s:boundarysoft)
 call s:h('PmenuSbar', s:none, s:boundary)
 call s:h('PmenuSel', s:boundary, s:primary, [s:attrs.bold])
 call s:h('PmenuThumb', s:none, s:primary)
+hi! link Question     KaiserDangerBold
 hi! link Search       KaiserSearch
 hi! link SignColumn   KaiserBgBoundary
 call s:h('StatusLine', s:none, s:boundary, [s:attrs.bold])
@@ -221,6 +223,7 @@ hi! link TabLine      KaiserBoundary
 hi! link TabLineFill  KaiserBoundary
 hi! link TabLineSel   KaiserPrimary
 hi! link Title        KaiserPrimary
+hi! link WarningMsg   KaiserWarningBold
 hi! link VertSplit    KaiserBgBoundary
 hi! link Visual       KaiserVisual
 hi! link VisualNOS    KaiserVisual
