@@ -204,6 +204,8 @@ hi! link DiffDelete   KaiserDangerInverse
 hi! link DiffRemoved  KaiserDanger
 call s:h('DiffText', s:background, s:warning, [s:attrs.inverse, s:attrs.italic])
 hi! link ErrorMsg     KaiserBgDanger
+call s:h('Folded', s:comments, s:boundary, [s:attrs.italic])
+call s:h('FoldColumn', s:boundarysoft, s:boundarysoft)
 hi! link IncSearch    KaiserIncSearch
 hi! link LineNr       KaiserFgSelection
 call s:h('NonText', s:boundarysoft)
