@@ -21,7 +21,7 @@ let g:kaiser#palette.info          = ['#8ec07c', 108] " 142-192-124
 let g:kaiser#palette.danger        = ['#fe8019', 208] " 254-128-25
 
 let g:kaiser#palette.comments      = ['#928374', 245] " 146-131-116
-let g:kaiser#palette.purple        = ['#d3869b', 175] " 211-134-155 [not used]
+let g:kaiser#palette.visual        = ['#908658', 108] " 211-134-155 [not used]
 let g:kaiser#palette.red           = ['#fb4934', 167] " 251-73-52   [not used]
 
 

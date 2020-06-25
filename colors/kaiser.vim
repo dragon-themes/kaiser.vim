@@ -44,7 +44,7 @@ let s:warning       = g:kaiser#palette.warning
 let s:danger        = g:kaiser#palette.danger
 
 let s:gradient3     = g:kaiser#palette.gradient3
-let s:purple        = g:kaiser#palette.purple
+let s:visual        = g:kaiser#palette.visual
 let s:red           = g:kaiser#palette.red
 
 let s:none          = ['NONE', 'NONE']
@@ -182,6 +182,7 @@ call s:h('KaiserInfoLine', s:none, s:none, [s:attrs.undercurl], s:primary)
 
 call s:h('KaiserSearch', s:background, s:secondary)
 call s:h('KaiserIncSearch', s:background, s:danger)
+call s:h('KaiserVisual', s:none, s:visual)
 
 " User Interface:
 " -----------------------------------------------------------------------------
@@ -219,6 +220,8 @@ hi! link TabLineFill  KaiserBoundary
 hi! link TabLineSel   KaiserPrimary
 hi! link Title        KaiserPrimary
 hi! link VertSplit    KaiserBgBoundary
+hi! link Visual       KaiserVisual
+hi! link VisualNOS    KaiserVisual
 
 
 " Plugins
