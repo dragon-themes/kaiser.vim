@@ -161,15 +161,18 @@ call s:h('KaiserSecondaryItalic', s:secondary, s:none, [s:attrs.italic])
 call s:h('KaiserInfo', s:info)
 call s:h('KaiserInfoBold', s:info, s:none, [s:attrs.bold])
 call s:h('KaiserInfoItalic', s:info, s:none, [s:attrs.italic])
+call s:h('KaiserInfoInverse', s:info, s:background, [s:attrs.inverse, s:attrs.italic])
 
 call s:h('KaiserWarning', s:warning)
 call s:h('KaiserWarningBold', s:warning, s:none, [s:attrs.bold])
 call s:h('KaiserWarningItalic', s:warning, s:none, [s:attrs.italic])
+call s:h('KaiserWarningInverse', s:warning, s:background, [s:attrs.inverse, s:attrs.italic])
 
 call s:h('KaiserBgDanger', s:none, s:danger)
 call s:h('KaiserDanger', s:danger)
 call s:h('KaiserDangerBold', s:danger, s:none, [s:attrs.bold])
 call s:h('KaiserDangerItalic', s:danger, s:none, [s:attrs.italic])
+call s:h('KaiserDangerInverse', s:danger, s:background, [s:attrs.inverse, s:attrs.italic])
 
 call s:h('KaiserError', s:red, s:none, [], s:danger)
 
@@ -190,8 +193,16 @@ call s:h('CursorLine', s:none, s:boundary)
 hi! link ColorColumn  KaiserBgBoundary
 hi! link CursorLineNr KaiserSecondary
 hi! link Directory    KaiserPrimary
+hi! link DiffAdd      KaiserInfoInverse
+hi! link DiffAdded    KaiserInfo
+hi! link DiffChange   KaiserWarningInverse
+hi! link DiffChanged  KaiserWarning
+hi! link DiffDelete   KaiserDangerInverse
+hi! link DiffRemoved  KaiserDanger
+call s:h('DiffText', s:background, s:warning, [s:attrs.inverse, s:attrs.italic])
 hi! link ErrorMsg     KaiserBgDanger
 hi! link LineNr       KaiserFgSelection
+call s:h('NonText', s:boundarysoft)
 call s:h('Pmenu', s:foreground, s:boundarysoft)
 call s:h('PmenuSbar', s:none, s:boundary)
 call s:h('PmenuSel', s:boundary, s:primary, [s:attrs.bold])
