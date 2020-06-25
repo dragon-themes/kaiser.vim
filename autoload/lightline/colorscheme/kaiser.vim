@@ -14,7 +14,7 @@ let s:secondary     = g:kaiser#palette.secondary
 
 if exists('g:lightline')
 
-  let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'terminal':{}}
+  let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, 'terminal':{}}
   let s:p.normal.left     = [ [ s:background, s:primary, 'bold' ], [ s:primary, s:boundarysoft ] ]
   let s:p.normal.right    = [ [ s:background, s:boundarylight ], [ s:primary, s:boundarysoft ] ]
   let s:p.normal.middle   = [ [ s:boundarylight, s:boundary ] ]
@@ -30,18 +30,17 @@ if exists('g:lightline')
   let s:p.inactive.right  = [ [ s:selection, s:boundary ], [ s:selection, s:boundary ] ]
   let s:p.inactive.left   = [ [ s:selection, s:boundary ], [ s:selection, s:boundary ] ]
   let s:p.inactive.middle = [ [ s:selection, s:boundary ] ]
+  let s:p.tabline.left    = [ [ s:boundarylight, s:boundarysoft ] ]
+  let s:p.tabline.tabsel  = [ [ s:background, s:primary ] ]
+  let s:p.tabline.middle  = [ [ s:background, s:boundary ] ]
+  let s:p.tabline.right   = [ [ s:background, s:danger ] ]
+  let s:p.normal.error    = [ [ s:background, s:danger ] ]
+  let s:p.normal.warning  = [ [ s:background, s:warning ] ]
 
   " TODO: Review Colors
   let s:p.terminal.left   = [ [ s:background, s:warning, 'bold' ], [ s:foreground, s:boundarysoft ] ]
   let s:p.terminal.right  = [ [ s:background, s:warning ], [ s:foreground, s:boundarysoft ] ]
   let s:p.terminal.middle = [ [ s:boundarylight, s:boundary ] ]
-  " let s:p.tabline.left    = [ [ s:boundarylight, s:boundarysoft ] ]
-  " let s:p.tabline.tabsel  = [ [ s:background, s:boundarylight ] ]
-  " let s:p.tabline.middle  = [ [ s:background, s:selection ] ]
-  " let s:p.tabline.right   = [ [ s:background, s:danger ] ]
-  "
-  let s:p.normal.error    = [ [ s:background, s:danger ] ]
-  let s:p.normal.warning  = [ [ s:background, s:warning ] ]
 
   let g:lightline#colorscheme#kaiser#palette = lightline#colorscheme#flatten(s:p)
 
