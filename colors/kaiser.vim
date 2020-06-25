@@ -27,27 +27,27 @@ endif
 " Palette: 
 " -----------------------------------------------------------------------------
 
-let s:background = g:kaiser#palette.background
-let s:foreground = g:kaiser#palette.foreground
-let s:selection  = g:kaiser#palette.selection
-let s:comments   = g:kaiser#palette.comments
+let s:background    = g:kaiser#palette.background
+let s:foreground    = g:kaiser#palette.foreground
+let s:selection     = g:kaiser#palette.selection
+let s:comments      = g:kaiser#palette.comments
 
-let s:bondary    = g:kaiser#palette.bondary
-let s:gradient2  = g:kaiser#palette.gradient2
-let s:gradient3  = g:kaiser#palette.gradient3
-let s:gradient4  = g:kaiser#palette.gradient4
+let s:boundary      = g:kaiser#palette.boundary
+let s:boundarysoft  = g:kaiser#palette.boundarysoft
+let s:boundarylight = g:kaiser#palette.boundarylight
 
-let s:primary    = g:kaiser#palette.primary
-let s:secondary  = g:kaiser#palette.secondary
+let s:primary       = g:kaiser#palette.primary
+let s:secondary     = g:kaiser#palette.secondary
 
-let s:success    = g:kaiser#palette.success
-let s:warning    = g:kaiser#palette.warning
-let s:danger     = g:kaiser#palette.danger
+let s:success       = g:kaiser#palette.success
+let s:warning       = g:kaiser#palette.warning
+let s:danger        = g:kaiser#palette.danger
 
-let s:purple     = g:kaiser#palette.purple
-let s:red        = g:kaiser#palette.red
+let s:gradient3     = g:kaiser#palette.gradient3
+let s:purple        = g:kaiser#palette.purple
+let s:red           = g:kaiser#palette.red
 
-let s:none       = ['NONE', 'NONE']
+let s:none          = ['NONE', 'NONE']
 
 
 if has('nvim')
@@ -134,6 +134,7 @@ endfunction
 " -----------------------------------------------------------------------------
 
 call s:h('KaiserBackground', s:none, s:background)
+call s:h('KaiserBgBoundary', s:background, s:boundary)
 
 call s:h('KaiserForeground', s:foreground)
 call s:h('KaiserForegroundBold', s:foreground, s:none, [s:attrs.bold])
@@ -143,7 +144,9 @@ call s:h('KaiserComments', s:comments)
 call s:h('KaiserCommentsBold', s:comments, s:none, [s:attrs.bold])
 
 call s:h('KaiserSelection', s:none, s:selection)
+call s:h('KaiserFgSelection', s:selection)
 
+call s:h('KaiserBgPrimary', s:none, s:primary)
 call s:h('KaiserPrimary', s:primary)
 call s:h('KaiserPrimaryBold', s:primary, s:none, [s:attrs.bold])
 call s:h('KaiserPrimaryItalic', s:primary, s:none, [s:attrs.italic])
@@ -160,6 +163,7 @@ call s:h('KaiserWarning', s:warning)
 call s:h('KaiserWarningBold', s:warning, s:none, [s:attrs.bold])
 call s:h('KaiserWarningItalic', s:warning, s:none, [s:attrs.italic])
 
+call s:h('KaiserBgDanger', s:none, s:danger)
 call s:h('KaiserDanger', s:danger)
 call s:h('KaiserDangerBold', s:danger, s:none, [s:attrs.bold])
 call s:h('KaiserDangerItalic', s:danger, s:none, [s:attrs.italic])
@@ -169,4 +173,39 @@ call s:h('KaiserError', s:red, s:none, [], s:danger)
 call s:h('KaiserErrorLine', s:none, s:none, [s:attrs.undercurl], s:danger)
 call s:h('KaiserWarnLine', s:none, s:none, [s:attrs.undercurl], s:warning)
 call s:h('KaiserInfoLine', s:none, s:none, [s:attrs.undercurl], s:primary)
+
+
+" User Interface:
+" -----------------------------------------------------------------------------
+
+set background=dark
+
+
+call s:h('Normal', s:foreground, g:kaiser_colorterm || has('gui_running') ? s:background : s:none )
+
+call s:h('CursorLine', s:none, s:boundary)
+hi! link ColorColumn  KaiserBgBoundary
+hi! link CursorLineNr KaiserSecondary
+hi! link Directory    KaiserPrimary
+hi! link ErrorMsg     KaiserBgDanger
+hi! link LineNr       KaiserFgSelection
+call s:h('Pmenu', s:foreground, s:boundarysoft)
+call s:h('PmenuSbar', s:none, s:boundary)
+call s:h('PmenuSel', s:boundary, s:primary, [s:attrs.bold])
+call s:h('PmenuThumb', s:none, s:primary)
+hi! link SignColumn   KaiserBgBoundary
+call s:h('StatusLine', s:none, s:boundary, [s:attrs.bold])
+call s:h('StatusLineNC', s:comments, s:boundarysoft, [s:attrs.bold])
+hi! link TabLine      KaiserBoundary
+hi! link TabLineFill  KaiserBoundary
+hi! link TabLineSel   KaiserPrimary
+hi! link Title        KaiserPrimary
+hi! link VertSplit    KaiserBgBoundary
+
+
+
+
+
+
+
 

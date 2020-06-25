@@ -1,28 +1,28 @@
 " Palette: 
 " -----------------------------------------------------------------------------
 
-let g:kaiser#palette            = {}
+let g:kaiser#palette               = {}
 
 " gradient block
-let g:kaiser#palette.background = ['#282828', 235] " 40-40-40
-let g:kaiser#palette.bondary  = ['#3c3836', 237] " 60-56-47
-let g:kaiser#palette.gradient2  = ['#504945', 239] " 80-73-69
-let g:kaiser#palette.selection  = ['#7c6f64', 243] " 124-111-100
-let g:kaiser#palette.gradient3  = ['#bdae93', 248] " 189-174-147
-let g:kaiser#palette.gradient4  = ['#a89984', 246] " 168-153-132
-let g:kaiser#palette.foreground = ['#ebdbb2', 223] " 235-219-178
+let g:kaiser#palette.background    = ['#282828', 235] " 40-40-40
+let g:kaiser#palette.boundary      = ['#3c3836', 237] " 60-56-47
+let g:kaiser#palette.boundarysoft  = ['#504945', 239] " 80-73-69
+let g:kaiser#palette.selection     = ['#7c6f64', 243] " 124-111-100
+let g:kaiser#palette.gradient3     = ['#bdae93', 248] " 189-174-147 [not used]
+let g:kaiser#palette.boundarylight = ['#a89984', 246] " 168-153-132
+let g:kaiser#palette.foreground    = ['#ebdbb2', 223] " 235-219-178
 
 " colorful block
-let g:kaiser#palette.primary    = ['#83a598', 109] " 131-165-152
-let g:kaiser#palette.secondary  = ['#fabd2f', 214] " 250-189-47
+let g:kaiser#palette.primary       = ['#83a598', 109] " 131-165-152
+let g:kaiser#palette.secondary     = ['#fabd2f', 214] " 250-189-47
 
-let g:kaiser#palette.warning    = ['#b8bb26', 142] " 184-187-38
-let g:kaiser#palette.success    = ['#8ec07c', 108] " 142-192-124
-let g:kaiser#palette.danger     = ['#fe8019', 208] " 254-128-25
+let g:kaiser#palette.warning       = ['#b8bb26', 142] " 184-187-38
+let g:kaiser#palette.success       = ['#8ec07c', 108] " 142-192-124
+let g:kaiser#palette.danger        = ['#fe8019', 208] " 254-128-25
 
-let g:kaiser#palette.comments   = ['#928374', 245] " 146-131-116
-let g:kaiser#palette.purple     = ['#d3869b', 175] " 211-134-155
-let g:kaiser#palette.red        = ['#fb4934', 167] " 251-73-52
+let g:kaiser#palette.comments      = ['#928374', 245] " 146-131-116
+let g:kaiser#palette.purple        = ['#d3869b', 175] " 211-134-155 [not used]
+let g:kaiser#palette.red           = ['#fb4934', 167] " 251-73-52   [not used]
 
 
 " ANSI
