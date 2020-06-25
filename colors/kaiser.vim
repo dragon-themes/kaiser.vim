@@ -206,3 +206,13 @@ hi! link Title        KaiserPrimary
 hi! link VertSplit    KaiserBgBoundary
 
 
+" Plugins
+" -----------------------------------------------------------------------------
+
+" GitGutter
+hi! link GitGutterAdd           KaiserBoundarySignInfo
+hi! link GitGutterChange        KaiserBoundarySignWarning
+hi! link GitGutterDelete        KaiserBoundarySignDanger
+hi! link GitGutterChangeDelete  KaiserBoundarySignInfo
+
+
