@@ -6,7 +6,7 @@ let s:selection     = g:kaiser#palette.selection
 let s:foreground    = g:kaiser#palette.foreground 
 let s:boundarylight = g:kaiser#palette.boundarylight
 
-let s:success       = g:kaiser#palette.success
+let s:info          = g:kaiser#palette.info
 let s:primary       = g:kaiser#palette.primary
 let s:warning       = g:kaiser#palette.warning
 let s:danger        = g:kaiser#palette.danger

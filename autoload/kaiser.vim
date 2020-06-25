@@ -17,7 +17,7 @@ let g:kaiser#palette.primary       = ['#83a598', 109] " 131-165-152
 let g:kaiser#palette.secondary     = ['#fabd2f', 214] " 250-189-47
 
 let g:kaiser#palette.warning       = ['#b8bb26', 142] " 184-187-38
-let g:kaiser#palette.success       = ['#8ec07c', 108] " 142-192-124
+let g:kaiser#palette.info          = ['#8ec07c', 108] " 142-192-124
 let g:kaiser#palette.danger        = ['#fe8019', 208] " 254-128-25
 
 let g:kaiser#palette.comments      = ['#928374', 245] " 146-131-116
