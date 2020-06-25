@@ -180,6 +180,8 @@ call s:h('KaiserErrorLine', s:none, s:none, [s:attrs.undercurl], s:danger)
 call s:h('KaiserWarnLine', s:none, s:none, [s:attrs.undercurl], s:warning)
 call s:h('KaiserInfoLine', s:none, s:none, [s:attrs.undercurl], s:primary)
 
+call s:h('KaiserSearch', s:background, s:secondary)
+call s:h('KaiserIncSearch', s:background, s:danger)
 
 " User Interface:
 " -----------------------------------------------------------------------------
@@ -201,12 +203,14 @@ hi! link DiffDelete   KaiserDangerInverse
 hi! link DiffRemoved  KaiserDanger
 call s:h('DiffText', s:background, s:warning, [s:attrs.inverse, s:attrs.italic])
 hi! link ErrorMsg     KaiserBgDanger
+hi! link IncSearch    KaiserIncSearch
 hi! link LineNr       KaiserFgSelection
 call s:h('NonText', s:boundarysoft)
 call s:h('Pmenu', s:foreground, s:boundarysoft)
 call s:h('PmenuSbar', s:none, s:boundary)
 call s:h('PmenuSel', s:boundary, s:primary, [s:attrs.bold])
 call s:h('PmenuThumb', s:none, s:primary)
+hi! link Search       KaiserSearch
 hi! link SignColumn   KaiserBgBoundary
 call s:h('StatusLine', s:none, s:boundary, [s:attrs.bold])
 call s:h('StatusLineNC', s:comments, s:boundarysoft, [s:attrs.bold])
