@@ -228,31 +228,3 @@ hi! link VertSplit    KaiserBgBoundary
 hi! link Visual       KaiserVisual
 hi! link VisualNOS    KaiserVisual
 
-
-" Plugins
-" -----------------------------------------------------------------------------
-
-" GitGutter
-hi! link GitGutterAdd           KaiserBoundarySignInfo
-hi! link GitGutterChange        KaiserBoundarySignWarning
-hi! link GitGutterDelete        KaiserBoundarySignDanger
-hi! link GitGutterChangeDelete  KaiserBoundarySignInfo
-
-
-" Asynchronous Lint Engine: 
-
-" call s:h('MatchParen', s:warning, s:none, [s:attrs.underline])
-hi! link ALEError               KaiserErrorLine
-hi! link ALEWarning             KaiserWarnLine
-hi! link ALEInfo                KaiserInfoLine
-
-hi! link ALEErrorSign           KaiserBoundarySignDanger
-hi! link ALEWarningSign         KaiserBoundarySignWarning
-hi! link ALEInfoSign            KaiserBoundarySignInfo
-
-hi! link ALEVirtualTextError    KaiserDanger
-hi! link ALEVirtualTextWarning  KaiserWarning
-hi! link ALEVirtualTextInfo     KaiserInfo
-
-
-
