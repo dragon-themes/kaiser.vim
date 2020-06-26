@@ -192,8 +192,10 @@ set background=dark
 
 call s:h('Normal', s:foreground, g:kaiser_colorterm || has('gui_running') ? s:background : s:none )
 
-call s:h('CursorLine', s:none, s:boundary)
 hi! link ColorColumn  KaiserBgBoundary
+hi! link Conceal      KaiserPrimary
+call s:h('CursorColumn', s:none, s:boundary)
+call s:h('CursorLine', s:none, s:boundary)
 hi! link CursorLineNr KaiserSecondary
 hi! link Directory    KaiserPrimary
 hi! link DiffAdd      KaiserInfoInverse
@@ -208,6 +210,8 @@ call s:h('Folded', s:comments, s:boundary, [s:attrs.italic])
 call s:h('FoldColumn', s:boundarysoft, s:boundarysoft)
 hi! link IncSearch    KaiserIncSearch
 hi! link LineNr       KaiserFgSelection
+hi! link MatchParen   KaiserSecondaryBold
+hi! link ModeMsg      KaiserSecondaryBold
 hi! link MoreMsg      KaiserInfoBold
 call s:h('NonText', s:boundarysoft)
 call s:h('Pmenu', s:foreground, s:boundarysoft)
@@ -217,14 +221,24 @@ call s:h('PmenuThumb', s:none, s:primary)
 hi! link Question     KaiserDangerBold
 hi! link Search       KaiserSearch
 hi! link SignColumn   KaiserBgBoundary
+hi! link SpecialKey   KaiserSecondary
 call s:h('StatusLine', s:none, s:boundary, [s:attrs.bold])
 call s:h('StatusLineNC', s:comments, s:boundarysoft, [s:attrs.bold])
 hi! link TabLine      KaiserBoundary
 hi! link TabLineFill  KaiserBoundary
 hi! link TabLineSel   KaiserPrimary
 hi! link Title        KaiserPrimary
-hi! link WarningMsg   KaiserWarningBold
 hi! link VertSplit    KaiserBgBoundary
 hi! link Visual       KaiserVisual
 hi! link VisualNOS    KaiserVisual
+hi! link WarningMsg   KaiserWarningBold
+call s:h('WildMenu', s:primary, s:boundarysoft,[s:attrs.bold])
 
+" TODO
+
+" Cursor	the character under the cursor 
+" CursorIM	like Cursor, but used when in IME mode |CursorIM| 
+" SpellBad	Word that is not recognized by the spellchecker. |spell| This will be combined with the highlighting used otherwise.
+" SpellCap	Word that should start with a capital. |spell| This will be combined with the highlighting used otherwise.
+" SpellLocal	Word that is recognized by the spellchecker as one that is used in another region. |spell| This will be combined with the highlighting used otherwise.  
+" SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| This will be combined with the highlighting used otherwise.  
