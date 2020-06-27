@@ -255,35 +255,35 @@ hi! link Constant       KaiserPrimary	                " any constant
 hi! link String         KaiserInfoBold
 hi! link Character      KaiserDangerItalic              " a character constant: 'c', '\n'
 hi! link Number	        KaiserDanger            	" a number constant: 234, 0xff
-hi! link Boolean	KaiserPrimary                   " a boolean constant: TRUE, false
+hi! link Boolean	KaiserDanger                    " a boolean constant: TRUE, false
 hi! link Float	        KaiserDanger            	" a floating point constant: 2.3e10
 "
-hi! link Identifier	Normal                          " any variable name
+hi! link Identifier	KaiserInfoItalic                " any variable name
 hi! link Function       KaiserSecondary                 " function name (also: methods for classes)
-hi! link Statement      KaiserPrimary                   " any statement	
+hi! link Statement      KaiserPrimaryItalic             " any statement	
 
-hi! link Conditional    KaiserPrimary                   " if, then, else, endif, switch, etc.
-hi! link Repeat         KaiserPrimary                   " for, do, while, etc.
+hi! link Conditional    KaiserPrimaryItalic             " if, then, else, endif, switch, etc.
+hi! link Repeat         KaiserPrimaryItalic             " for, do, while, etc.
 hi! link Label          KaiserPrimary                   " case, default, etc.
 hi! link Operator       KaiserPrimary                  	" sizeof', '+', '*', etc.
 hi! link Keyword        KaiserDanger                    " any other keyword
 hi! link Exception      KaiserPrimary                   " try, catch, throw
 "
 hi! link PreProc        KaiserPrimary	                " generic Preprocessor
-hi! link Include        KaiserPrimary	                " preprocessor #include
+hi! link Include        KaiserPrimaryItalic	        " preprocessor #include
 hi! link Define		KaiserPrimary                   " preprocessor #define
 hi! link Macro		KaiserPrimary                   " same as Define
 hi! link PreCondit	KaiserPrimary                   " preprocessor #if, #else, #endif, etc.
 
 hi! link Type	        KaiserSecondary                 " int, long, char, etc.
-hi! link StorageClass	KaiserPrimary                   " static, register, volatile, etc.
-hi! link Structure	KaiserDangerItalic              " struct, union, enum, etc.
+hi! link StorageClass	KaiserPrimaryItalic             " static, register, volatile, etc.
+hi! link Structure	KaiserInfoBold                  " struct, union, enum, etc.
 hi! link Typedef	KaiserSecondary                 " A typedef
 
-hi! link Special	KaiserDangerBold                " any special symbol
-hi! link SpecialChar	KaiserDangerBold                " special character in a constant
-hi! link Tag            KaiserDangerBold             	" you can use CTRL-] on this
-hi! link Delimiter	KaiserDangerBold                " character that needs attention
+hi! link Special	KaiserWarningBold               " any special symbol
+hi! link SpecialChar	KaiserWarningBold               " special character in a constant
+hi! link Tag            KaiserWarningBold             	" you can use CTRL-] on this
+hi! link Delimiter	KaiserPrimary                   " character that needs attention
 hi! link SpecialComment	KaiserCommentsBold              " special things inside a comment
 " Debug		debugging statements
 
