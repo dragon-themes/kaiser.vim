@@ -7,7 +7,7 @@
 scriptencoding utf8
 
 
-" Initialisation: 
+" Initialisation
 " -----------------------------------------------------------------------------
 
 if v:version > 580
@@ -24,7 +24,7 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
 endif
 
 
-" Palette: 
+" Palette
 " -----------------------------------------------------------------------------
 
 let s:background    = g:kaiser#palette.background
@@ -64,7 +64,7 @@ if has('terminal')
 endif
 
 
-" User Configuration:
+" User Configuration 
 " -----------------------------------------------------------------------------
 
 if !exists('g:kaiser_bold')
@@ -92,7 +92,7 @@ if !exists('g:kaiser_colorterm')
 endif
 
 
-" Script Helpers:
+" Script Helpers
 " -----------------------------------------------------------------------------
 
 let s:attrs = {
@@ -130,7 +130,7 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
 endfunction
 
 
-" Kaiser: Hightlight Groups
+" Kaiser Hightlight Groups
 " -----------------------------------------------------------------------------
 
 call s:h('KaiserBackground', s:none, s:background)
@@ -184,7 +184,7 @@ call s:h('KaiserSearch', s:background, s:secondary)
 call s:h('KaiserIncSearch', s:background, s:danger)
 call s:h('KaiserVisual', s:none, s:visual)
 
-" User Interface:
+" User Interface
 " -----------------------------------------------------------------------------
 
 set background=dark
@@ -242,3 +242,51 @@ call s:h('WildMenu', s:primary, s:boundarysoft,[s:attrs.bold])
 " SpellCap	Word that should start with a capital. |spell| This will be combined with the highlighting used otherwise.
 " SpellLocal	Word that is recognized by the spellchecker as one that is used in another region. |spell| This will be combined with the highlighting used otherwise.  
 " SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| This will be combined with the highlighting used otherwise.  
+"
+
+" Syntax
+" -----------------------------------------------------------------------------
+
+hi! link Comment        KaiserComments                  " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+hi! link Todo           KaiserWarningInverse
+
+hi! link Constant       KaiserPrimary	                " any constant
+hi! link String         KaiserInfoBold
+hi! link Character      KaiserDangerItalic              " a character constant: 'c', '\n'
+hi! link Number	        KaiserDanger            	" a number constant: 234, 0xff
+hi! link Boolean	KaiserPrimary                   " a boolean constant: TRUE, false
+hi! link Float	        KaiserDanger            	" a floating point constant: 2.3e10
+"
+hi! link Identifier	Normal                          " any variable name
+hi! link Function       KaiserSecondary                 " function name (also: methods for classes)
+hi! link Statement      KaiserPrimary                   " any statement	
+
+hi! link Conditional    KaiserPrimary                   " if, then, else, endif, switch, etc.
+hi! link Repeat         KaiserPrimary                   " for, do, while, etc.
+hi! link Label          KaiserPrimary                   " case, default, etc.
+hi! link Operator       KaiserPrimary                  	" sizeof', '+', '*', etc.
+hi! link Keyword        KaiserDanger                    " any other keyword
+hi! link Exception      KaiserPrimary                   " try, catch, throw
+"
+hi! link PreProc        KaiserPrimary	                " generic Preprocessor
+hi! link Include        KaiserPrimary	                " preprocessor #include
+hi! link Define		KaiserPrimary                   " preprocessor #define
+hi! link Macro		KaiserPrimary                   " same as Define
+hi! link PreCondit	KaiserPrimary                   " preprocessor #if, #else, #endif, etc.
+
+hi! link Type	        KaiserSecondary                 " int, long, char, etc.
+hi! link StorageClass	KaiserPrimary                   " static, register, volatile, etc.
+hi! link Structure	KaiserDangerItalic              " struct, union, enum, etc.
+hi! link Typedef	KaiserSecondary                 " A typedef
+
+hi! link Special	KaiserDangerBold                " any special symbol
+hi! link SpecialChar	KaiserDangerBold                " special character in a constant
+hi! link Tag            KaiserDangerBold             	" you can use CTRL-] on this
+hi! link Delimiter	KaiserDangerBold                " character that needs attention
+hi! link SpecialComment	KaiserCommentsBold              " special things inside a comment
+" Debug		debugging statements
+
+hi! link Underlined     KaiserForegroundUnderline	" text that stands out, HTML links
+"
+" *Ignore		left blank, hidden  |hl-Ignore|
+hi! link Error         KaiserErrorLine		        " any erroneous construct
