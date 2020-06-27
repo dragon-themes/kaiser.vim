@@ -28,12 +28,12 @@ hi! link ALEVirtualTextInfo     KaiserInfo
 
 if exists('g:loaded_fzf') && ! exists('g:fzf_colors')
   let g:fzf_colors = {
-    \ 'fg':      ['fg', 'Normal'],
+    \ 'fg':      ['fg', 'KaiserFgBoundaryLight'],
     \ 'bg':      ['bg', 'Normal'],
-    \ 'hl':      ['fg', 'KaiserDanger'],
-    \ 'fg+':     ['fg', 'KaiserSecondary'],
+    \ 'hl':      ['fg', 'Normal'],
+    \ 'fg+':     ['fg', 'KaiserPrimary'],
     \ 'bg+':     ['bg', 'KaiserBoundary'],
-    \ 'hl+':     ['fg', 'KaiserDanger'],
+    \ 'hl+':     ['fg', 'KaiserSecondary'],
     \ 'info':    ['fg', 'KaiserInfo'],
     \ 'border':  ['fg', 'KaiserBoundary'],
     \ 'prompt':  ['fg', 'KaiserSecondary'], 
