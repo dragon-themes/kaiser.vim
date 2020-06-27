@@ -144,7 +144,7 @@ call s:h('KaiserForeground', s:foreground)
 call s:h('KaiserForegroundBold', s:foreground, s:none, [s:attrs.bold])
 call s:h('KaiserForegroundUnderline', s:foreground, s:none, [s:attrs.underline])
 
-call s:h('KaiserComments', s:comments)
+call s:h('KaiserComments', s:comments, s:none, [s:attrs.italic])
 call s:h('KaiserCommentsBold', s:comments, s:none, [s:attrs.bold])
 
 call s:h('KaiserSelection', s:none, s:selection)
