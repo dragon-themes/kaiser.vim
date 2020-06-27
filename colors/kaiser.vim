@@ -135,6 +135,7 @@ endfunction
 
 call s:h('KaiserBackground', s:none, s:background)
 call s:h('KaiserBgBoundary', s:background, s:boundary)
+call s:h('KaiserFgBoundaryLight', s:boundarylight)
 call s:h('KaiserBoundarySignDanger', s:danger, s:boundary)
 call s:h('KaiserBoundarySignWarning', s:warning, s:boundary)
 call s:h('KaiserBoundarySignInfo', s:info, s:boundary)
