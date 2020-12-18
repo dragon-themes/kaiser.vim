@@ -6,7 +6,7 @@ endif
 " -----------------------------------------------------------------------------
 
 hi! link jsxAttrib                              KaiserWarningItalic
-hi! link jsxTagName                             KaiserDanger
+hi! link jsxTagName                             KaiserPrimary
 hi! link jsxComponentName                       KaiserSecondary
 hi! link jsxCloseString                         KaiserFgBoundaryLight
 hi! link jsxBraces                              KaiserFgBoundaryLight
