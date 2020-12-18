@@ -141,6 +141,7 @@ call s:h('KaiserBoundarySignWarning', s:warning, s:boundary)
 call s:h('KaiserBoundarySignInfo', s:info, s:boundary)
 
 call s:h('KaiserForeground', s:foreground)
+call s:h('KaiserForegroundItalic', s:foreground, s:none, [s:attrs.italic])
 call s:h('KaiserForegroundBold', s:foreground, s:none, [s:attrs.bold])
 call s:h('KaiserForegroundUnderline', s:foreground, s:none, [s:attrs.underline])
 
